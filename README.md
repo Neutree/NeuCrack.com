@@ -1,3 +1,3 @@
 # NeuCrack.com
 My blog
-[NeuCrack.com](neucrack.com)
+[NeuCrack.com](http://www.neucrack.com)
