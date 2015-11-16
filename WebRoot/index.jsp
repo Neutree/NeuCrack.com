@@ -10,6 +10,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
+
+	<div id="preloader">      
+      <div id="status">
+         <img src="assets/images/preloader.gif" height="150" width="200" alt="">
+      </div>
+   </div>
 	<head>
 		<title>NeuCrack</title>
 
@@ -88,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="header" class="content-block">
 				<section class="top clearfix">
 					<div class="pull-left">
-						<h1><a class="logo" href="index.html">neucrack</a></h1>
+						<h1><a class="logo" href="index.jsp">neucrack</a></h1>
 					</div>
 					<div class="pull-right">
 						<a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a>

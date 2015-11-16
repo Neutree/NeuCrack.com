@@ -107,6 +107,26 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0px 0px 18px rgba(0,0,0,0.8);
 }
 
+#preloader  {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: #e9e8f2;
+   z-index: 99999;
+   height: 100%;
+   
+}
+#status  {    
+   position: absolute;
+   left: 43%;
+   top: 43%;
+   width: 200px;
+   height: 150px;
+   margin: -32px 0 0 -32px;  
+   padding: 0;    
+}
 /*////////////////////////////////////////////////////////////////////////
 //  02 - Header
 ///////////////////////////////////////////////////////////////////////*/
