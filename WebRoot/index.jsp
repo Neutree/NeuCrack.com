@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<div id="preloader">      
       <div id="status">
-         <img src="assets/images/preloader.gif" height="150" width="200" alt="">
+         <img src="assets/images/preloader.gif" height="64" width="64" alt="">
       </div>
    </div>
 	<head>
