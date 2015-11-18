@@ -10,27 +10,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
-
-	<div id="preloader">      
-      <div id="status">
-         <div id="loading">
-			<div id="loading-center">
-				<div id="loading-center-absolute">
-					<div class="object" id="object_one"></div>
-					<div class="object" id="object_two"></div>
-					<div class="object" id="object_three"></div>
-					<div class="object" id="object_four"></div>
-					<div class="object" id="object_five"></div>
-					<div class="object" id="object_six"></div>
-					<div class="object" id="object_seven"></div>
-					<div class="object" id="object_eight"></div>
-					<div class="object" id="object_big"></div>
+<div id="preloader">      
+	      <div id="status">
+	         <div id="loading">
+				<div id="loading-center">
+					<div id="loading-center-absolute">
+						<div class="object" id="object_one"></div>
+						<div class="object" id="object_two"></div>
+						<div class="object" id="object_three"></div>
+						<div class="object" id="object_four"></div>
+						<div class="object" id="object_five"></div>
+						<div class="object" id="object_six"></div>
+						<div class="object" id="object_seven"></div>
+						<div class="object" id="object_eight"></div>
+						<div class="object" id="object_big"></div>
+					</div>
 				</div>
+			 
 			</div>
-		 
-		</div>
-      </div>
-   </div>
+	      </div>
+	   </div>
+	
 	<head>
 		<title>NeuCrack</title>
 
@@ -63,6 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 	
 	<body>
+		
 		<div id="drawer-right">
 			<div class="cross text-right">
 				<a class="toggleDrawer" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
@@ -194,7 +195,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								    	<input type="email" class="form-control form-control-white" id="subject" placeholder="Your Name" required>
 								  	</div>
 								    <div class="form-group">
-								    	<input type="email" class="form-control form-control-white" id="exampleInputEmail2" placeholder="Enter email" required>
+								    	<input type="email" class="form-control form-control-white" id="exampleInputEmail2" placeholder="Your email" required>
 								    </div>
 								    <div class="form-group">
 								    	<textarea class="form-control form-control-white" placeholder="Write Something" required></textarea>

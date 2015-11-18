@@ -7,8 +7,10 @@
 
    	// will first fade out the loading animation 
     	// will fade out the whole DIV that covers the website. 
-    	$("#loading-center-absolute").hide(500); 
-    	$("#preloader").delay(500).fadeOut("slow").remove();
+  		$('#header').hide();
+  		$('#loading-center-absolute').slideUp(500);
+  		$('#loading').delay(500).slideUp(600);
+  		$('#header').show();
   	}) 
   	
   // debouncing function from John Hann
