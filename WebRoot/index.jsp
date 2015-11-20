@@ -190,15 +190,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<section class="block-body">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3">
-								<form class="" role="form">
+								<form action="Visitor_SaveVisitorMessage_index.jsp" class="" role="form">
 									<div class="form-group">
-								    	<input type="email" class="form-control form-control-white" id="subject" placeholder="Your Name" required>
+								    	<input type="text" name="visitorName" class="form-control form-control-white" id="subject" placeholder="Your Name" required>
 								  	</div>
 								    <div class="form-group">
-								    	<input type="email" class="form-control form-control-white" id="exampleInputEmail2" placeholder="Your email" required>
+								    	<input type="email" name="visitorEmail" class="form-control form-control-white" id="exampleInputEmail2" placeholder="Your email" required>
 								    </div>
 								    <div class="form-group">
-								    	<textarea class="form-control form-control-white" placeholder="Write Something" required></textarea>
+								    	<textarea name="visitorMessage" class="form-control form-control-white" placeholder="Write Something" required></textarea>
 								    </div>
 								  <input type="submit" class="btn btn-o-white" value="Say Hello">
 								</form>

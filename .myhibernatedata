@@ -1,0 +1,21 @@
+#MyEclipse Hibernate Properties
+#Sat Nov 21 01:47:30 CST 2015
+genBasicCompId=false
+sessionFactoryName=com.neucrack.hibernate.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=native
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/NeuCrack.com/hibernate.reveng.xml
+configFile=/NeuCrack.com/src/hibernate.cfg.xml
+createConfigFile=true
+baseDaoClass=com.neucrack.model.VisitorBaseDAO

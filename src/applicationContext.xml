@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<!-- Spring管理Struts2的Action -->
+	<bean name="visitorAction" class="com.neucrack.action.VisitorAction" scope="prototype">
+		<property name="visitorManager" ><ref bean="visitorManage"/></property> 
+	</bean>
+	
+	<!-- userManager的bean及其userListDAO属性注入 -->
+	<bean name="visitorManage" class="com.neucrack.server.VisitorManagerImpl">
+		<property name="visitorDao" ><ref bean="visitorDAO"/></property> 
+	</bean>
+	
+	<!-- userDAO的配置及其属性注入 -->
+	<bean name="visitorDAO" class="com.neucrack.model.VisitorDAO">
+<!-- 	<property name="sessionFactory" ref="sessionFactory" />  -->	
+	</bean>
+	
+	
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+	>
+	 <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+    <property name="url" value="jdbc:mysql://neucrack.com:3306/k" />  
+    <property name="username" value="" />  
+    <property name="password" value="" /> 
+	</bean>
+
+	<!-- sessionFactory的配置 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 简化注册hbm.xml文件 -->  
+	    <property name="packagesToScan">  
+	        <list>  
+	            <value>com.neucrack.model</value>  
+	        </list>  
+	    </property>
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">  
+        <tx:attributes>  
+            <tx:method name="Save*" propagation="REQUIRED"/>  
+            <tx:method name="*" propagation="REQUIRED" read-only="true"></tx:method>  
+        </tx:attributes>  
+    </tx:advice>  
+    <aop:config expose-proxy="true" proxy-target-class="true">  
+        <aop:pointcut expression="within(com.*)" id="allMethod" />  
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allMethod" />  
+    </aop:config>  
+	
+</beans>

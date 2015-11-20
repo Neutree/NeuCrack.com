@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="visitorActions" extends="struts-default">
+        <action name="Visitor_*_*" class="visitorAction" method="{1}">
+            <result name="success" >/{2}.jsp</result>
+            <result name="error">/{2}.jsp</result>
+        </action>
+    </package>
+</struts>    
