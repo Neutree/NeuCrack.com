@@ -462,7 +462,12 @@ h1, h2, h3, h4, h5, h6{
 	color: white;
 }
 
-
+.hintMessage{
+	color: white;
+    text-align: center;
+    margin-right: 10%;
+    font-size: xx-large;
+}
 
 /*////////////////////////////////////////////////////////////////////////
 //  04 - Parallax styles

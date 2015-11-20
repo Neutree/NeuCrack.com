@@ -11,6 +11,7 @@
   		$('#loading-center-absolute').slideUp(500);
   		$('#loading').delay(500).slideUp(600);
   		$('#header').show();
+  		setTimeout("jQuery('#hintMessage').slideUp(1500);",5000);
   	}) 
   	
   // debouncing function from John Hann
@@ -106,7 +107,6 @@
 
 
 
-
 	///////////////////////////////
 	// Initialize
 	///////////////////////////////
@@ -116,7 +116,9 @@
 	centerHomeBannerText();
 	setSlideNav();
 	setHeaderBackground();
-
+	
+	
+	
 	//Resize events
 	jQuery(window).smartresize(function(){
 		setHomeBannerHeight();

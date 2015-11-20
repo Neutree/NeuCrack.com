@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<jsp:useBean id="MessageBean" class="com.neucrack.model.Message" scope="request"/>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -112,6 +113,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="pull-left">
 						<h1><a class="logo" href="index.jsp">neucrack</a></h1>
 					</div>
+					<div class="hintMessage" id="hintMessage">
+						<jsp:getProperty property="backNews" name="MessageBean"/>
+					</div>
 					<div class="pull-right">
 						<a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a>
 					</div>
@@ -190,7 +194,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<section class="block-body">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3">
-								<form action="Visitor_SaveVisitorMessage_index.jsp" class="" role="form">
+								<form action="Visitor_SaveVisitorMessage_index" method="post" class="" role="form">
 									<div class="form-group">
 								    	<input type="text" name="visitorName" class="form-control form-control-white" id="subject" placeholder="Your Name" required>
 								  	</div>
