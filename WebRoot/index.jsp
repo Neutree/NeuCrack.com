@@ -76,25 +76,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<a href="#wrapper"><i class="fa fa-home"></i> Home</a>
 					</li>
 					<li>
-						<a href="#portfolio"><i class="fa fa-bookmark"></i> Lib</a>
+						<a href="#portfolio"><i class="fa fa-bookmark"></i> Navigation</a>
 					</li>
-					<li>
-						<a href="#portfolio"><i class="fa fa-star"></i> Life</a>
-					</li><!--
-					<li>
-						<a href="#blog"><i class="fa fa-wordpress"></i> Blog</a>
+					
+					<li onclick="javascript:location.href='http://blog.neucrack.com'">
+						<a href="http://blog.neucrack.com" target="_blank" ><i class="fa fa-edit"></i> Blog</a>
 					</li>
+					
 					<li>
-						<a href="#parallax"><i class="fa fa-heart"></i> Parallax</a>
+						<a href="#contact"><i class="fa fa-comments"></i> Contact Me</a>
 					</li>
-					<li>
-						<a href="#testimonials"><i class="fa fa-thumbs-up"></i> Testimonials</a>
-					</li> -->
-					<li>
-						<a href="#contact"><i class="fa fa-phone-square"></i> Contact</a>
-					</li>
+					
 				</ul>
+				
 			</nav>
+			
 			<div class="social">
 				<h2>Stay Connected</h2>
 				<ul>
@@ -188,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="content-block" id="contact">
 				<div class="container text-center">
 					<header class="block-heading cleafix">
-						<h1>Contact Me</h1>
+						<h1>Leave me your message</h1>
 						<p>Feel free to drop me a line.</p>
 					</header>
 					<section class="block-body">

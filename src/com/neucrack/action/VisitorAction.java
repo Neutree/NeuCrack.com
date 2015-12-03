@@ -55,7 +55,9 @@ public class VisitorAction extends ActionSupport {
 		HttpServletRequest request=ServletActionContext.getRequest();
 		Message MessageBean=new Message();
 		request.setAttribute("MessageBean",MessageBean);//将会更新id是MessageBean的bean
-		String ip=request.getRemoteAddr();
+		String ip=request.getHeader("X-Forwarded-For");
+		if(ip == null)
+			ip=request.getRemoteAddr();
 		byte result=visitorManager.SaveMessage(new Visitor(visitorName,visitorEmail,ip,visitorMessage));
 		switch(result){
 		case 0:
